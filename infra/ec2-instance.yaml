@@ -4,8 +4,15 @@ Description: Single EC2 instance (Amazon Linux 2023) running nginx to host a Rea
 Parameters: # Inputs that can be changed at deploy time
   InstanceType: # Parameter for the EC2 size
     Type: String # Value is plain text
-    Default: t2.micro # Used when no value is passed (free-tier size)
-    AllowedValues: [t2.micro, t2.small, t2.medium, t3.micro, t3.small, t3.medium] # Only these sizes are accepted (lab-friendly)
+    Default: t2.small # Used when no value is passed (free-tier size)
+    AllowedValues: [
+        t2.micro,
+        t2.small,
+        t2.medium,
+        t3.micro,
+        t3.small,
+        t3.medium,
+      ] # Only these sizes are accepted (lab-friendly)
     Description: EC2 instance size. # Help text shown in the console
   SSHLocation: # Parameter for who can SSH in
     Type: String # Value is plain text
@@ -52,7 +59,8 @@ Resources: # AWS resources this stack creates
       SecurityGroupIds: # Security groups attached to the instance
         - !GetAtt SecurityGroup.GroupId # Uses the security group created above
       UserData: # Script that runs once, on the instance's first boot
-        Fn::Base64: | # EC2 expects the script base64-encoded; "|" keeps the lines as written
+        Fn::Base64:
+          | # EC2 expects the script base64-encoded; "|" keeps the lines as written
           #!/bin/bash
           set -euo pipefail                             # Stop on the first error (shows in /var/log/cloud-init-output.log)
           dnf install -y nginx                          # Install the nginx web server
