@@ -1,17 +1,17 @@
 {
-  "name": "Sammy",
-  "tagline": "DevOps & Cloud Engineer in the making ",
-  "photo": "profile.png",
-  "roll": "4447",
-  "department": "Computer Engineering",
-  "year": "2020",
-  "email": "bhattsameer4447@gmail.com",
+  "name": "Rai",
+  "tagline": "Student at Sunway",
+  "photo": "profile1.png",
+  "roll": "14",
+  "department": "Computer Science",
+  "year": "2025",
+  "email": "kshitij_rai_a25@sunway.edu.np",
   "gpa": "4.00",
-  "about": "I automate things so I don't have to do them twice, then spend three hours debugging the automation. My pipelines are green, my coffee is strong, and \"it works on my machine\" is no longer an excuse, because I put my machine in a Docker container.",
+  "about": "Studying to become goat",
   "skills": ["Linux", "Git", "GitHub Actions", "Docker", "Jenkins", "AWS", "CloudFormation", "Nginx", "React"],
   "links": {
-    "github": "https://github.com/Sammy4447",
-    "linkedin": "www.linkedin.com/in/er-sameer-bhatt-905562232"
+    "github": "https://github.com/LPL_Rai",
+    "linkedin": "https://www.linkedin.com/in/kshitij-deep-rai/"
   },
   "quotes": [
     "Stay hungry, stay foolish.",
